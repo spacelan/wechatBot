@@ -113,8 +113,7 @@ exports = module.exports = class wechat {
         let params = {
             'appid': 'wx782c26e4c19acffb',
             'fun': 'new',
-            'lang': 'zh_CN',
-            '_': _getTime()
+            'lang': 'zh_CN'
         }
         return this.axios({
             method: 'POST',
@@ -351,8 +350,7 @@ exports = module.exports = class wechat {
                 'uin': this.uin,
                 'skey': this.skey,
                 'deviceid': this.deviceId,
-                'synckey': this.synckey,
-                '_': _getTime(),
+                'synckey': this.synckey
             },
         }).then(res => {
             let re = /window.synccheck={retcode:"(\d+)",selector:"(\d+)"}/
